@@ -1,0 +1,19 @@
+
+<div class= "container">
+    <form [formGroup]='miFormulario'>
+        Usuario: <input 
+        [class.is-invalid]="miFormulario.get('username').touched && miFormulario.get('username').invalid"
+        type="text" 
+        class="form-control" 
+        formControlName="username">
+        Password: <input
+        [class.is-invalid]="miFormulario.get('userpassword').touched && miFormulario.get('username').invalid"
+        type="password" 
+        class="form-control" 
+        formControlName="userpassword"><br/>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+
+    {{miFormulario.value | json}}
+
+</div>
